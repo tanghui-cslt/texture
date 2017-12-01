@@ -18,6 +18,13 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="psBMPLoader.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="psBMPLoader.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{399C60EA-4F77-4746-88C7-094B6E033B8D}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
@@ -77,9 +84,11 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
+    <IncludePath>D:\eigen-eigen-5a0156e40feb;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
+    <IncludePath>D:\eigen-eigen-5a0156e40feb;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -118,7 +127,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <SDLCheck>true</SDLCheck>
+      <SDLCheck>false</SDLCheck>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -136,7 +145,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <SDLCheck>true</SDLCheck>
+      <SDLCheck>false</SDLCheck>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -145,8 +154,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
